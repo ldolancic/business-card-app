@@ -35,7 +35,7 @@ $ php bin/console doctrine:schema:update --force
 
 5) Run your app
 
-I strongly adwise you to run this app under a webserver like Apache. But if you do not have a webserver installed, you can also use the following command:
+I strongly advise you to run this app under a webserver like Apache. But if you do not have a webserver installed, you can also use the following command:
 
 ```sh
 $ php bin/console server:run
