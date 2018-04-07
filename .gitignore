@@ -13,5 +13,12 @@
 /var/sessions/*
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
+/web/pictures/*
+!web/pictures/.gitkeep
+/web/businessCardPdfs/*
+!web/businessCardPdfs/.gitkeep
 /vendor/
 /web/bundles/
+/.DS_Store
+/.idea
+/web/.DS_Store

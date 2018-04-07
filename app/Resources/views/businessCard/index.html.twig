@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Business card listing</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="{{ url('business_card_create') }}">Create a card</a>
+            </div>
+        </div>
+
+        <br>
+
+        {% for businessCard in businessCards %}
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <div class="col-sm-4">
+                        {{ businessCard.firstName }}
+                        {{ businessCard.lastName }}
+                    </div>
+
+                    <div class="col-sm-4">
+                        {{ businessCard.position }}
+                        at
+                        {{ businessCard.company }}
+                    </div>
+
+                    <div class="col-sm-4">
+                        <a href="{{ url('business_card_show', { id: businessCard.id }) }}">View</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

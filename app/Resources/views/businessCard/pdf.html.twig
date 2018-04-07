@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container" style="background-color: {{ businessCard.baseColor }}">
+        <div class="col-xs-6">
+            <br>
+            <h3>
+                {{ businessCard.firstName|capitalize }}
+                {{ businessCard.lastName|capitalize }}
+            </h3>
+
+            <div>
+                {{ businessCard.position }}
+                <strong>at</strong>
+                {{ businessCard.company }}
+            </div>
+
+            <br>
+
+            <div>
+                <strong>Contact phone</strong><br>
+                {{ businessCard.phone }}
+            </div>
+
+            <div>
+                <strong>Contact email</strong><br>
+                {{ businessCard.email }}
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <img src="{{ baseUrl }}/pictures/{{ businessCard.picture }}" alt="business card picture" class="img-responsive">
+        </div>
+    </div>
+{% endblock %}
