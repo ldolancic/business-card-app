@@ -17,3 +17,8 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
+    # Needed for PDF generation from CLI
+    router.request_context.host: 127.0.0.1:8001
+    router.request_context.scheme: http
+    router.request_context.base_url: /
